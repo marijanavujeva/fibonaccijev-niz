@@ -1,32 +1,17 @@
-function fibonacciGenerator (n) {
-//Do NOT change any of the code above 👆
-    
-    var output = [];
-    var a = 0;
-    var b = 1;
+var length = 0;
  
- 
-    for (var i=0; i < n; i ++) {
-      
-      if (i === 0) {
-        output.push(a);
-      } if (i === 1) {
-          output.push(b);
-        } if (i > 1) {
-          output.push(output[a] + output[b]);
-          a++;
-          b++;
- 
- 
+function fibonacci(length) {
+    var fibonacciArray = [];
+    for (var i = 0; i < length; i++) {
+        if (i === 0) {
+            fibonacciArray.push(0);
+        } else if (i === 1) {
+            fibonacciArray.push(1);
+        } else {
+            var sumTwoNumber = 0;
+            sumTwoNumber = fibonacciArray[i-2] + fibonacciArray[i-1];
+            fibonacciArray.push(sumTwoNumber); 
         }
- 
     }
-    
-    return output;
-    
-    
-    //Return an array of fibonacci numbers starting from 0.
-    
-//Do NOT change any of the code below 👇
+    return fibonacciArray;
 }
- 
