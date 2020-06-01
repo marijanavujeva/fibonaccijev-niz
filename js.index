@@ -1,26 +1,13 @@
 function fibonacciGenerator (n) {
-//Do NOT change any of the code above
-
-//Write your code here:
-
-var autput = [];
-if (n == 1) {
-   output = [0]
-   }
-   
-   else if (n === 2) {
-      output = [0,1];
-      
-  }
+ var fibonacciArray = [];
+ for (var i = 0; i < n; i++) {
+ if(i<2){
+   fibonacciArray.push(i)
+   } 
    else {
-        output = [0, 1, 1, 2];
-        
-        for(var i = 2; < n; i++) {
-        output.push(output[output.length - 2] + output[output.length - 1]);
-        }
-       }
-   
-   return output;
+   fibonacciArray.push(fibonacciArray[i-2] + fibonacciArray[i-1]);
    }
-   
+  }
+  return fibonacciArray;
+  }
   
